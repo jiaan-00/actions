@@ -25,4 +25,4 @@ jobs:
         uses: actions/checkout@v4
       - name: run the function file.
         run: |
-          python -c "from main import add; print('answer', add(13, 12))"
+          python -c "from master import add; print('answer', add(13, 12))"
