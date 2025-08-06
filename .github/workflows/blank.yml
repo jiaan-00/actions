@@ -28,4 +28,8 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }} | Run ${{ github.run_number }}
+          body: |
+            run id: ${{ github.run_id }}
+            run number: ${{ github.run_number }}
+            run attempt: ${{ github.run_attempt }}
