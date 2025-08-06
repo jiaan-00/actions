@@ -24,4 +24,4 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: run the function file.
-        run: python -c "from main import add; print('answer', add(13, 12))"
+        run: python -c "from main import add; add(13, 12) == 1)"
