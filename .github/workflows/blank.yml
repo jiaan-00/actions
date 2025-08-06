@@ -24,16 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      #check if a file exists in the repo
-      - name: exist or no
-        run: |
-          if test -f "main.py"; then
-            echo "it is there. yay"
-          else
-            echo "main.py not found. sobs"
-            exit 1
-          fi
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
