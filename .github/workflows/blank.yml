@@ -17,8 +17,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "release"
-  add-function:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
@@ -27,6 +26,7 @@ jobs:
         run: python test.py
   release:
     runs-on: ubuntu-latest
+    needs: build
     permissions:
       contents: write
     steps:
