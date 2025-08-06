@@ -1,5 +1,5 @@
-from main import add
+from main import minus
 
-assert add(13, 12) == 25, "this should be 25"
+assert minus(13, 12) == 1, "don't worry, i find subtraction hard too"
 
 print("test passed")
